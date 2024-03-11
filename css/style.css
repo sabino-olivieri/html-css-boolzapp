@@ -35,6 +35,7 @@ body {
     --header-height: 60px;
     --notifications-height: 60px;
     --search-box-height: 40px;
+    --footer-height: 60px;
 }
 
 .viewport {
@@ -44,7 +45,7 @@ body {
 
 .wrapper {
     width: 80%;
-    height: 90%;
+    height: 95%;
 
 
     /* DEBUG */
@@ -98,9 +99,9 @@ body {
 
 /* CHAT-NAME */
 
-header {
+header{
     height: var(--header-height);
-    background-color: var(--main-color);
+    justify-content: space-between;
 }
 
 .notifications {
@@ -110,10 +111,20 @@ header {
 
 .chat-name main {
     height: calc(100% - var(--header-height) - var(--notifications-height) - var(--search-box-height));
-    overflow: auto;
+    overflow-y: auto;
 }
 
+/* CHAT */
 
+footer {
+    height: var(--footer-height);
+}
+
+.chat main {
+    height: calc(100% - var(--header-height) - var(--footer-height));
+    overflow-y: auto;
+    background-image: url(../img/mine.jpg);
+}
 
 .chat-list li {
     border-bottom: 1px solid var(--main-color);
@@ -129,6 +140,7 @@ header {
 
     .chat-name {
         width: 10%;
+        min-width: var(--header-height);
     }
 
     .chat-name main {
@@ -154,6 +166,7 @@ header {
 
     .chat-name {
         width: 0%;
+        min-width: 0%;
     }
 
     .chat {
