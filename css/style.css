@@ -13,7 +13,8 @@ img {
 }
 
 a {
-    text-decoration: none;
+    all: unset;
+    cursor: pointer;
 }
 
 ul {
@@ -68,8 +69,20 @@ body {
     justify-content: center;
 }
 
+.gap {
+    gap: 10px;
+}
+
 .bg-main {
     background-color: var(--main-color);
+}
+
+.avatar img {
+    aspect-ratio: 1;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
 }
 
 /* WRAPPER */
@@ -84,8 +97,29 @@ body {
 .chat {
     width: 70%;
     height: 100%;
-    /* DEBUG */
-    background-color: lightcoral;
+}
+
+/* CHAT-NAME */
+
+header{
+    height: var(--header-height);
+    justify-content: space-between;
+    padding: 10px;
+    color: #B1B1B1;
+}
+
+.chat-name header .avatar{
+    height: 100%;
+}
+
+.chat-name header .menu-list i {
+    padding: 0px 5px;
+    font-size: 20px
+}
+
+.notifications {
+    background-color: #8EDAFC;
+    height: var(--notifications-height);
 }
 
 .search-box {
@@ -95,18 +129,6 @@ body {
 
 .search-box input {
     width: 100%;
-}
-
-/* CHAT-NAME */
-
-header{
-    height: var(--header-height);
-    justify-content: space-between;
-}
-
-.notifications {
-    background-color: #8EDAFC;
-    height: var(--notifications-height);
 }
 
 .chat-name main {
@@ -141,6 +163,10 @@ footer {
     .chat-name {
         width: 10%;
         min-width: var(--header-height);
+    }
+
+    .chat-name header .menu-list {
+        display: none;
     }
 
     .chat-name main {
