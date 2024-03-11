@@ -85,7 +85,7 @@ body {
 .circle {
     aspect-ratio: 1;
     height: 100%;
-    max-height: 100px;
+    max-height: 60px;
     border-radius: 50%;
     object-fit: cover;
     object-position: center;
@@ -185,8 +185,24 @@ footer {
 
 .chat-list li {
     border-bottom: 1px solid var(--main-color);
-    height: 5em;
+    min-height: 80px;
+    padding: 10px 15px;
 }
+
+.chat-list li span {
+    color: grey;
+    font-size: 0.8rem;
+}
+
+.preview {
+    width: 100%;
+}
+
+.row {
+    justify-content: space-between;
+}
+
+
 
 @media screen and (max-width:768px) {
 
