@@ -71,3 +71,26 @@ body {
     background-color: lightcoral;
 }
 
+@media screen and (max-width:768px) {
+
+    .list-chat {
+        width: 10%;
+    }
+
+    .chat {
+        width: 90%;
+    }
+    
+}
+
+@media screen and (max-width:425px) {
+
+    .list-chat {
+        width: 0%;
+    }
+
+    .chat {
+        width: 100%;
+    }
+    
+}
