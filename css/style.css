@@ -194,7 +194,7 @@ header .menu-list i {
     padding: 0px 10px;
 }
 
-.chat-name main {
+.chat-name .main {
     height: calc(100% - var(--header-height) - var(--notifications-height) - var(--search-box-height));
     overflow-y: auto;
 }
