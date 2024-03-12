@@ -9,7 +9,7 @@
 }
 
 img {
-    max-width: 100%;
+    max-height: 100%;
 }
 
 a {
@@ -95,6 +95,7 @@ body {
 
 .chat-name {
     width: 30%;
+    min-width: 250px;
     height: 100%;
     background-color: white;
 }
@@ -164,6 +165,7 @@ header{
     width: 100%;
     height: 100%;
     margin-left: 5px;
+    padding: 0px 10px;
 }
 
 .chat-name main {
@@ -184,9 +186,9 @@ footer {
 }
 
 .chat-list li {
-    border-bottom: 1px solid var(--main-color);
+    box-shadow: 0px 1px 0px var(--main-color);
     min-height: 80px;
-    padding: 10px 15px;
+    padding: 10px;
 }
 
 .chat-list li span {
@@ -200,11 +202,17 @@ footer {
 
 .row {
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 
 
 @media screen and (max-width:768px) {
+
+    :root {
+        --notifications-height: 0px;
+        --search-box-height: 0px;
+    }
 
     .wrapper {
         width: 100%;
@@ -212,25 +220,39 @@ footer {
     }
 
     .chat-name {
-        width: 10%;
-        min-width: calc(var(--header-height) + 15px);
+        min-width: 0px;
+        width: calc(var(--header-height) + 10px);
     }
 
+    
     .chat-name header .menu-list {
         display: none;
     }
 
+    .chat-name header {
+        justify-content: center;
+    }
+
     .chat-name main {
         height: calc(100% - var(--header-height));
-
     }
+    
+    .chat-list li {
+        min-height: var(--header-height);
+        height: var(--header-height);
+    }
+
+    .chat-list .preview {
+        display: none;
+    }
+
 
     .notifications {
         display: none;
     }
 
     .chat {
-        width: 90%;
+        width: calc(100% - var(--header-height));
     }
 
     .search-box {
